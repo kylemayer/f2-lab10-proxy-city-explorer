@@ -1,11 +1,9 @@
 name: Node.js CI
-
 on:
   push:
     branches: [ master, main, dev ]
   pull_request:
     branches: [ master, main, dev ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,3 +20,6 @@ jobs:
       env:
         CI: true
         DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
+        LOCATION_KEY: ${{ secrets.pk.e64659da95b31ad84f86c2867b5d603b }}
+        WEATHER_KEY: ${{ secrets.f5d8488c5cf3422b8c57c36e1f994367 }}
+        EVENT_KEY: ${{ secret.Ma_wwGCTY0Nq7mtP8W8yDRBK7hAxKh3oGAQHjW_DeXdVFUNoJJJCw3iLc3MZtN9K028NfVNrBSGVRgDxvZP9c_--pADpQNwuS8YnMuGb6yDc9tzn-R5zNhsSWanUYHYx}}
